@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!--Imports a model-viewer JavaScript code -->
+    <!--It helps to handle how the 3D Object would be displayed -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  <title>Rubik's By Patterns: Oriented Corners</title>
+
+</head>
+  
+<body>
+
+
+ <!-- Navbar -->
+  <nav class="navbar navbar-light align-items-end" style="background-color: #377ae6; color: white;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="index.html"><img src="/Assets/Logo.svg" alt="Logo" style="height:60px; padding: 5px;"></a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="border-color: white;">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                       
+      </button>
+      
+    </div>
+
+    
+    <div class="collapse navbar-collapse" id="myNavbar" >
+      <ul class="nav navbar-nav" >
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="firstLayer.html">Top Layer</a></li>
+        <li><a href="middleLayer.html">Middle Layer</a></li>
+        <li><a href="cross.html">Cross</a></li>
+        <li><a href="orientedCross.html">Oriented Cross</a></li>
+        <li><a href="bottomCorners.html">Bottom Corners</a></li>
+        <li class="active"><a href="final.html">Oriented Corners</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- MAIN -->
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <!-- Side tab -->
+    <div class="col-sm-2 sidenav text-left">
+      <p><a href="#Intro">End point</p>
+      <p><a href="#StartingPoint">Starting point</p>
+      <p><a href="#KeyMovers">Key Movers</a></p>
+      <p><a href="#Method">Method</a></p>
+      <!--
+      <p><a href="#WhatHappened">What happened</a></p>
+      -->
+    </div>
+
+    <!-- Main content -->
+          <div class="col-sm-10 text-left main"> 
+      <h1>Orienting the last corners: Solved corners to the back please! </h1>
+      <h3 id="Intro"></h3>
+      <p>Hooray! The last push.</p>
+      <br>
+      <p>For this last pattern, we will be doing the pattern twice, with just one adjustment inbetween them. So whilst it seems long, you are only really learning one movement pattern and then repeating it. The biggest challenge to this one is that once you have done the pattern once, the rest of the cube will appear jumbled up - trust the process!</p>
+      
+      <hr>
+      <h3 id="StartingPoint">Starting Point</h3>
+      <p>Most often you will get to this point, and when you look at your cube you will have one completly solved corner.</p>
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+          <model-viewer src="/Assets/CornersOrientedImages/finalStarting.glb" alt="Rubiks cube skeleton" camera-controls style="height: 300px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="1" exposure="0.75" camera-orbit="-134.5deg 60.14deg 20.63m" field-of-view="30deg"></model-viewer>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+      <br>
+      <p>Check out the cube opposite the solved one. Does that cube have to move left or right to be in  the right spot? In the example below, it would have to move left.</p>
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+          <model-viewer src="/Assets/CornersOrientedImages/finalStarting.glb" alt="Rubiks cube skeleton" camera-controls style="height: 300px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="1" exposure="0.75" camera-orbit="-20deg 60.14deg 20.63m" field-of-view="30deg"></model-viewer>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+
+      <p>Once you know if it has to go left or right, turn the cube so that the two that you will be swapping are facing you.</p>
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+          <model-viewer src="/Assets/CornersOrientedImages/finalStarting.glb" alt="Rubiks cube skeleton" camera-controls style="height: 300px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="1" exposure="0.75" camera-orbit="0deg 60.14deg 20.63m" field-of-view="30deg"></model-viewer>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+
+      <p>Very occasionally you will find that there isn't actually a single solved corner. This can still be solved. Look at your cube carefully, which two cubes, if swapped, would result in 2 corners in the correct place? You will find that the same would be true of the ones opposite these. Put one of these pairs at the front and do the first part of the pattern. After that you will have two correct corners and can just put them at the back and continue with the second half of the pattern.</p>
+
+
+      <hr>
+      <h3 id="KeyMovers">Key Movers</h3>
+      <p>This is the first time you will be using the 'bottom' face as the ones you watch moving (instead of flipping it back to the 'top' as you have been doing for all the other patterns). The key movers for this are again the two side faces. When you are learning, it will be a little frustrating because this one and the previous pattern are fairly similar so you could get them confused. Persist, and you will soon recognises the patterns and be able to trouble-shoot them if you get them mixed up.</p>
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4"><img class="img-responsive" src="/Assets/CornersOrientedImages/cornerFinalKeyMovers.png" alt="Key Movers"></div>
+        <div class="col-sm-4"></div>
+
+      </div>
+
+      
+
+      <hr>
+      <h3 id="Method">Method</h3>
+      <p>You can do this either left or right handed, I'll show it to you both ways and you can decide which works best for you.</p>
+      
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">1</span> Turn your chosen side towards you.</p>
+      
+        <div class="row">
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalLeft01.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalRight01.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">2</span> As with the previous pattern, turn the bottom square in the direction of the face you have just moved.</p>
+      
+        <div class="row">
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalLeft02.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalRight02.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">3</span> This is where it will differ from the last pattern. This time you will send the two squares back to the top.</p>
+      
+        <div class="row">
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalLeft03.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalRight03.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">4</span> Turn the opposite side towards you.</p>
+      
+        <div class="row">
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalLeft04.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalRight04.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">5</span> Now turn this bottom square in the same direction you have just moved. The side-effect of this move is that you now have a row of 3 again on the side you just moved.</p>
+      
+        <div class="row">
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalLeft05.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalRight05.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">6</span> Send those 3 back up to the top.</p>
+      
+        <div class="row">
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalLeft06.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalRight06.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">7</span> Turn the other side with the two squares back towards you again.</p>
+      
+        <div class="row">
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalLeft07.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalRight07.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">8</span> Complete the row of three again, by turning the bottom towards the side you just moved.</p>
+      
+        <div class="row">
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalLeft08.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalRight08.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">9</span> Send those 3 up to the top. Then try to breath whilst your cube looks all messed up, and relax.</p>
+      
+        <div class="row">
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalLeft09.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalRight09.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">10</span> Check out your cube now. It should have two adjacent corners solved. Turn that top layer so that the solved two are at the back. Now your cube looks even more messed up. Don't worry, it very soon will appear to magically resemble a solved cube...!</p>
+      
+        <div class="row">
+          <div class="col-sm-4">
+            
+          </div>
+          <div class="col-sm-4">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinal10.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+          <div class="col-sm-4"></div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p>Now you repeat the pattern.</p>
+        <p><span class="numbering">11</span> Turn your chosen side towards you.</p>
+      
+        <div class="row">
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalLeft11.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalRight11.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">12</span> Turn the bottom square in the direction of the face you have just moved.</p>
+      
+        <div class="row">
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalLeft12.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalRight12.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">13</span> This is where it will differ from the last pattern. This time you will send the two squares back to the top.</p>
+      
+        <div class="row">
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalLeft13.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalRight13.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">14</span> Turn the opposite side towards you.</p>
+      
+        <div class="row">
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalLeft14.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalRight14.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">15</span> Now turn this bottom square in the same direction you have just moved. The side-effect of this move is that you now have a row of 3 again on the side you just moved.</p>
+      
+        <div class="row">
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalLeft15.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalRight15.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">16</span> Send those 3 back up to the top.</p>
+      
+        <div class="row">
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalLeft16.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalRight16.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">17</span> Turn the other side with the two squares back towards you again.</p>
+      
+        <div class="row">
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalLeft17.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalRight17.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">18</span> Complete the row of three again, by turning the bottom towards the side you just moved.</p>
+      
+        <div class="row">
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalLeft18.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalRight18.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">19</span> Send those 3 up to the top. Look at that! An almost solved cube!</p>
+      
+        <div class="row">
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalLeft19.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalRight19.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">20</span> I don't think I really need to tell you what to do to finally complete your cube!</p>
+      
+        <div class="row">
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4">
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinal20.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+          <div class="col-sm-4"></div>
+        </div>
+      </div>
+      <br>
+
+      <hr>
+      <h3>Altogether</h3>
+      <div style="border: 1px solid; padding: 5px" >
+        <p>This is it altogether</p>
+      
+        <div class="row">
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalLeftAll.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalRightAll.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p>This is it altogether with key movers.</p>
+      
+        <div class="row">
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalLeftAllKeyMovers.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <p></p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CornersOrientedImages/cornerFinalRightAllKeyMovers.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+
+
+
+      <div class="row">
+        <div class="col-sm-2">
+          <a href="bottomCorners.html" class="navButton">&laquo; PREVIOUS</a>
+        </div>
+        <div class="col-sm-8"></div>
+        <div class="col-sm-2">
+          
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid text-center navbar navbar-light">
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <p>Email: <a href="mailto:rubiksByPatterns@gmail.com">rubiksByPatterns@gmail.com</a></p>
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-2">
+      <p>&copy; DCbyCode 2023</p>
+    </div>
+
+  </div>
+
+  
+</footer>
+
+</body>
+</html>
