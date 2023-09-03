@@ -21,21 +21,19 @@
     </head>
 
     <body>
-
+        <!--NavBar-->
         <nav class="navbar navbar-light align-items-end" style="background-color: #377ae6; color: white;">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a href="index.php"><img src="/Assets/Logo.svg" alt="Logo" style="height:60px; padding: 5px;"></a>
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="border-color: white;">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                       
-      </button>
-      
-    </div>
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a href="index.php"><img src="/Assets/Logo.svg" alt="Logo" style="height:60px; padding: 5px;"></a>
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="border-color: white;">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                       
+              </button>
+            </div>
 
-    
     <div class="collapse navbar-collapse" id="myNavbar" >
       <ul class="nav navbar-nav" >
         <li><a href="index.php">HOME</a></li>
@@ -54,13 +52,185 @@
     </div>
   </div>
 </nav>
+
+<!-- Main Body -->
+
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav text-left">
+      <p><a href="#About">About</a></p>
+      <p><a href="#Anatomy">Anatomy of a cube</a></p>
+      <p><a href="#Hints">Hints</a></p>
+    </div>
+    <div class="col-sm-10 text-left main"> 
+      <h1 id="About">Welcome to <i>Rubik's By Patterns</i></h1>
+      
+      <p>I aim to teach a method of solving the 3 x 3 cube that does not involve memorising algorithms, but rather understanding how you manipule the top layer in order to have an effect on the lower layers.</p>
+      <p>It is possible to manipulate the top layer in simple patterns that will then achieve the solving of the rest of the cube.</p>
+      <p>Remembering algorithms such as R' D L D' R D L' is difficult at the best of times. And doing this in the traditional way of holding the cube is even more tricky because there are no easy-to follow landmarks if you get lost in the algorithm.</p>
+      <p>Simply turning the cube to the solved face and watching how these squares are moved in some simple 6-8 step patterns gives the solver some easy-to-follow landmarks, as I will show you in the next few pages.</p>
+      <br>
+      <p>On this first page I will outline the anatomy of a cube as understanding how it works can sometimes be enough of a 'lightbulb' moment for you to work out how to solve the cube by yourself.</p>
+      <hr>
+      <h3 id="Anatomy">Anatomy of a cube</h3>
+      <div style="padding: 5px; border: 2px solid blue;">
+        <p>
+          A cube is made of 6 sides. For a Rubik's Cube, we call each side a <i>'face'</i>. Traditonally the faces are made of White, Yellow, Red, Orange, Blue and Green.
+        </p>
+
+        <p>Each face of the cube is made of 9 seperate squares: <br>
+          <ul>
+            <li>One <i>middle</i> square</li>
+            <li>Four <i>edge</i> squares</li>
+            <li>Four <i>corner</i> squares</li>
+          </ul>
+         </p>
+        <div class="text-center">
+          <img src="Images/AnatomyImages/LabelledFace.webp" style="width: 250px;" alt="Labelled Rubik's cube face">
+        </div>
+      </div>
+        <br><br>
+        <div style="padding: 5px; border: 2px solid blue;">
+        <p>The traditional colours (white, yellow, red, orange, blue and green), are also traditionally paired:<br>
+          <ul>
+            <li><span style="color: red;">Red</span> <-> <span style="color: orange;">Orange</span></li>
+            <li><span style="color: blue">Blue</span> <-> <span style="color: green;">Green</span></li>
+            <li><span style="color: white; background-color: grey; padding-left: 2px; padding-right: 2px;">White</span> <-> <span style="color: yellow; background-color: grey; padding-left: 2px; padding-right: 2px;">Yellow</span></li>
+        </ul>
+
+          You will find, on a completed cube, each pair end up opposite each other:</p>
+        <div class="row">
+          <div class="col-sm-2">
+            
+          </div>
+          <div class="col-sm-4">
+            
+          </div>
+          <div class="col-sm-6">
+            
+          </div>
+        </div>
+        <br>
         
+        <p>No matter how you make up the cube, they will always have the same colours opposite each other. Why? Well, the centre square will never move.</p>
+        <p>But why? Well, the centre piece is fixed to the inner workings of the cube, and each one only spins around its own axis.</p>
+        <div class="row">
+          
+          <div class="col-sm-6">
+            <model-viewer src="Images/AnatomyImages/RubiksSkeleton.glb" alt="Rubiks cube skeleton" camera-controls style="width: 400px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="0.88" exposure="0.56"></model-viewer>
+
+          </div>
+          <div class="col-sm-6">
+            <img src="Images/AnatomyImages/SkeletonMiddleTwisting.gif" style="width: 300px;" alt="GIF of twisting middle centre piece">
+          </div>
+        </div>
+      </div>
+      <br>
+      <div style="padding: 5px; border: 2px solid blue;" class="text-center">
+        <p>The edge and corner pieces are made like a puzzle, with shaped bits behind each cube that link together.</p>
+        <div class="row">
+          <div class="col-sm-6">
+            <p><b>Corner 3D</b></p>
+            <model-viewer src="Images/AnatomyImages/RubiksCubeCorner.glb" alt="Rubiks cube skeleton" camera-controls style="height: 160px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="0.88" exposure="0.56"></model-viewer>
+          </div>
+          <div class="col-sm-6">
+            <p><b>Edge 3D</b></p>
+            <model-viewer src="Images/AnatomyImages/RubiksCubeEdge.glb" alt="Rubiks cube skeleton" camera-controls style="height: 150px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="0.88" exposure="0.56"></model-viewer>
+          </div>
+        </div>
+        <br><br>
+        <div class="row">
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4" >
+            <p><b>Some joined up corner and edge pieces 3D</b></p>
+            <model-viewer src="Images/AnatomyImages/RubiksCubeInside1.glb" alt="Rubiks cube skeleton" camera-controls style="height: 300px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="0.88" exposure="0.56"></model-viewer>
+          </div>
+          <div class="col-sm-4"></div>
+        </div>
+        <div class="row">
+           <p>This clever design allowes each face of the cube to rotate, but is also what holds the cube together when combined with the middle skeleton. Amazing, huh?</p>
+        </div>
+        <div class="row">
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4">
+           
+            <model-viewer src="Images/AnatomyImages/RubiksCubeTwisted.glb" alt="Rubiks cube skeleton" camera-controls style="height: 300px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="0.88" exposure="0.5"></model-viewer>
+          </div>
+          <div class="col-sm-4"></div>
+        </div>
+      </div>
+      <br><br>
+      
+      <h4>Traditional does not work for everyone</h4>
+      <p>Traditionally, you will see a whole set of instructions that look like this:<br>
+        R F R' F' L U D'<br>
+        Unless you are super dedicated, remembering these algorithms is very difficult.
+      </p>
+      <p>A better way to remember and understand, is to visually see where certain pieces of the cube are moving to and from. Your mind is good at seeing patterns, and it is these patterns that I would like to show you.</p>
+      <p>This method predominantly uses the solved top layer to follow the movement and produce changes to the layers below. Confused? Don't worry, as you work through this method it will become clear.</p>
+      <p></p>
+      <p>I very much hope you fund this method useful, insightful, and fun. If you have any kind and helpful comments please email me at <a href="mailto:rubiksByPatterns@gmail.com">rubiksByPatterns@gmail.com</a></p>
+      
+      
+      <hr>
+      <h3 id="Hints">Hints</h3>
+      <p>Here are some tips to get you started:</p>
+      <ol>
+        <li>Given that the middle cubes never move, and remain opposite each other, you can 'know' where each edge and corner piece should end up.</li>
+        <li>Solve the top layer first, making sure the edges are all the same colour as the middle cubes.</li>
+        <li>If you mess up, reversing what you did will correct it.</li>
+        <li>Aim to make the next layer. How can you get those middle layer edge cubes into their correct positions? You will need to break the top and fix it again. It only takes 7 moves.</li>
+        <li>Try to see what simple moves that involve moving a top corner piece to the bottom layer, moving it around, then moving it back to its position can do to the bottom layer orientation.</li>
+        <li>Good luck, and happy cubing!</li>
+        
+      </ol>
+      <br>
+      <br>
+      <br>
+
+      <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8"></div>
+        <div class="col-sm-2">
+          <a href="TopLayer.php" class="navButton">NEXT &raquo;</a>
+        </div>
+      </div>
+      
+      <br>
+      <br>
+      <br>
+
+    </div>
+    <!--<div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>-->
+            </div>
+          </div>
+        </div>
+                
+ <!-- Footer -->       
+<footer class="container-fluid text-center navbar navbar-light">
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <p>Email: <a href="mailto:rubiksByPatterns@gmail.com">rubiksByPatterns@gmail.com</a></p>
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-2">
+      <p>&copy; DCbyCode 2023</p>
+    </div>
+
+  </div>
+
+  
+</footer>
 
 
 
-
-        <!-- Load external JavaScript -->
-        <script src="scripts.js"></script>
         
     </body>
 
