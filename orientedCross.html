@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!--Imports a model-viewer JavaScript code -->
+    <!--It helps to handle how the 3D Object would be displayed -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  <title>Rubik's By Patterns: Middle Layer</title>
+
+</head>
+  
+<body>
+
+
+ <!-- Navbar -->
+  <nav class="navbar navbar-light align-items-end" style="background-color: #377ae6; color: white;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="index.html"><img src="/Assets/Logo.svg" alt="Logo" style="height:60px; padding: 5px;"></a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="border-color: white;">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                       
+      </button>
+      
+    </div>
+
+    
+    <div class="collapse navbar-collapse" id="myNavbar" >
+      <ul class="nav navbar-nav" >
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="firstLayer.html">Top Layer</a></li>
+        <li><a href="middleLayer.html">Middle Layer</a></li>
+        <li><a href="cross.html">Cross</a></li>
+        <li><a href="orientedCross.html">Oriented Cross</a></li>
+        <li><a href="bottomCorners.html">Bottom Corners</a></li>
+        <li><a href="final.html">Oriented Corners</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- MAIN -->
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <!-- Side tab -->
+    <div class="col-sm-2 sidenav text-left">
+      <p><a href="#Intro">End point</p>
+      <p><a href="#StartingPoint">Starting point</p>
+      <p><a href="#KeyMovers">Key Movers</a></p>
+      <p><a href="#Method">Method</a></p>
+      <!--
+      <p><a href="#WhatHappened">What happened</a></p>
+      -->
+    </div>
+
+    <!-- Main content -->
+      <div class="col-sm-10 text-left main"> 
+      <h1>Orienting the cross</h1>
+      <h3 id="Intro"></h3>
+      <p>At this stage, we are going to get those cross cubes so that they are all in their correctly oriented positions. At the end it should look like this:</p>
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+          <model-viewer src="/Assets/CrossOrientedImages/bottomCrossOrientedEnding.glb" alt="Rubiks cube skeleton" camera-controls style="height: 300px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="1" exposure="0.75" camera-orbit="-111.4deg 63.01deg 20.63m" field-of-view="30deg"></model-viewer>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+      
+      <hr>
+      <h3 id="StartingPoint">Starting Point</h3>
+      <p>For this move, we want to orient our Rubik's cube so that the correctly oriented edge is at the top.</p>
+      <br>
+      <p>To find out if you are going to do this move on the right or the left, have a look at the colour of the correctly oriented edge cube. What is it's opposite colour?<br>
+      Remember:<br>
+        <ul>
+          <li><span style="color: red;">Red</span> <-> <span style="color: orange;">Orange</span></li>
+          <li><span style="color: blue">Blue</span> <-> <span style="color: green;">Green</span></li>
+          <li><span style="color: white; background-color: grey; padding-left: 2px; padding-right: 2px;">White</span> <-> <span style="color: yellow; background-color: grey; padding-left: 2px; padding-right: 2px;">Yellow</span></li>
+        </ul>
+      </p>
+      <p>Now see which side of the cube this is at in comparison to the oriented cube. Is it to the left or the right? If it is on the <b>left</b>, you will do this move with your <b>left</b> hand. If it is on the <i>right</i> then you will do this with your <i>right</i> hand.</p>
+
+      <div class="row">
+        
+        <div class="col-sm-5">
+          <model-viewer src="/Assets/CrossOrientedImages/bottomCrossOrientedLeftStarting.glb" alt="Rubiks cube skeleton" camera-controls style="height: 300px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="1" exposure="0.75" camera-orbit="-111.4deg 63.01deg 20.63m" field-of-view="30deg"></model-viewer>
+        </div>
+        
+        <div class="col-sm-5">
+           <model-viewer src="/Assets/CrossOrientedImages/bottomCrossOrientedRightStarting.glb" alt="Rubiks cube skeleton" camera-controls style="height: 300px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="1" exposure="0.75" camera-orbit="-63.83deg 63.01deg 20.63m" field-of-view="30deg"></model-viewer>
+           <div class="col-sm-2"></div>
+        </div>
+      </div>
+
+      <p>If you find yourself with two correctly oriented edge pieces, then what you need to do is place the two you need to swap at front and left, then do this with a RIGHT-handed move.</p>
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+          <model-viewer src="/Assets/CrossOrientedImages/bottomCrossOrientedTwo.glb" alt="Rubiks cube skeleton" camera-controls style="height: 300px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="1" exposure="0.75" camera-orbit="-111.4deg 63.01deg 20.63m" field-of-view="30deg"></model-viewer>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+
+      <p>Occasionally you will find that two OPPOSITE pieces are in the correct place. In this instance it does not matter which way you orient the cube or which hand you use, just do the move and then you will have to do it again once more.</p>
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+          <model-viewer src="/Assets/CrossOrientedImages/bottomCrossOrientedTwoOpposite.glb" alt="Rubiks cube skeleton" camera-controls style="height: 300px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="1" exposure="0.75" camera-orbit="-111.4deg 63.01deg 20.63m" field-of-view="30deg"></model-viewer>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+
+      <hr>
+      <h3 id="KeyMovers">Key Movers</h3>
+      <p>This move is rather fun, because you are only really manipulating one row of completed top squares</p>
+
+      <div class="row">
+       
+        <div class="col-sm-6">
+          <img src="/Assets/CrossOrientedImages/bottomCrossOrientedLeftKeyMovers.png" style="width: 400px;" alt="Image of bottom cross key movers on left for orientation">
+        </div>
+        <div class="col-sm-6">
+           <img src="/Assets/CrossOrientedImages/bottomCrossOrientedRightKeyMovers.png" style="width: 400px;" alt="Image of bottom cross key movers on right for orientation">
+        </div>
+      </div>      
+
+      
+
+      <hr>
+      <h3 id="Method">Method</h3>
+      <p>So now, you will do this either on the left or the right, depending on which side the 'opposite' colour is to the oriented edge.</p>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p>1) Bring the row of three forward on the side you are doing this manoeuvre</p>
+      
+        <div class="row">
+          <div class="col-sm-6">
+            <p>So if the bottom middle cube went right, you need to move the left face.</p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CrossOrientedImages/bottomCrossOrientedLeft1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <p>If the bottom middle cube went left, you need to move the right face.</p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CrossOrientedImages/bottomCrossOrientedRight1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">2</span> Spin the bottom square towards the side you are NOT manipulating.</p>
+      
+        <div class="row">
+          <div class="col-sm-6">
+            <p>If you just moved the left face, spin the bottom right.</p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CrossOrientedImages/bottomCrossOrientedLeft2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <p>If you just moved the right face, spin the bottom left.</p>
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CrossOrientedImages/bottomCrossOrientedRight2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">3</span> Replace the two square back up to the top.</p>  
+        <div class="row">
+          <div class="col-sm-6">
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CrossOrientedImages/bottomCrossOrientedLeft3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CrossOrientedImages/bottomCrossOrientedRight3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">4</span> Spin that bottom layer in the same direction that you moved it in move '2'</p>  
+        <div class="row">
+          <div class="col-sm-6">
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CrossOrientedImages/bottomCrossOrientedLeft4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CrossOrientedImages/bottomCrossOrientedRight4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">5</span> Bring the top two back toward the front again.</p>  
+        <div class="row">
+          <div class="col-sm-6">
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CrossOrientedImages/bottomCrossOrientedLeft5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CrossOrientedImages/bottomCrossOrientedRight5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">6</span> Now spin that bottom piece until it makes a row of 3 again. It doesn't matter if you spin it left or right because it will spin 180º.</p>  
+        <div class="row">
+          <div class="col-sm-6">
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CrossOrientedImages/bottomCrossOrientedLeft6.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CrossOrientedImages/bottomCrossOrientedRight6.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p><span class="numbering">7</span> Put the row of 3 back at the top.</p>  
+        <div class="row">
+          <div class="col-sm-6">
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CrossOrientedImages/bottomCrossOrientedLeft7.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CrossOrientedImages/bottomCrossOrientedRight7.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <hr>
+        <h3>Altogether</h3>
+      <div style="border: 1px solid; padding: 5px" >
+        <p>This is what it looks like altogether</p>  
+        <div class="row">
+          <div class="col-sm-6">
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CrossOrientedImages/bottomCrossOrientedLeftAll.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CrossOrientedImages/bottomCrossOrientedRightAll.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="border: 1px solid; padding: 5px" >
+        <p>This is what it looks like altogether, with the key-movers highlighted</p>  
+        <div class="row">
+          <div class="col-sm-6">
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CrossOrientedImages/bottomCrossOrientedLeftMarkedAll.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+          </div>
+          <div class="col-sm-6">
+            <video width="320" height="300" autoplay muted controls>
+              <source src="/Assets/CrossOrientedImages/bottomCrossOrientedRightMarkedAll.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+
+
+     <!-- <hr>
+      <h3 id="WhatHappened">What happened to the bottom layer</h3>
+      <p>What happened</p>
+    </div>-->
+    <!--<div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>-->
+
+
+      <div class="row">
+        <div class="col-sm-2">
+          <a href="cross.html" class="navButton">&laquo; PREVIOUS</a>
+        </div>
+        <div class="col-sm-8"></div>
+        <div class="col-sm-2">
+          <a href="bottomCorners.html" class="navButton">NEXT &raquo;</a>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid text-center navbar navbar-light">
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <p>Email: <a href="mailto:rubiksByPatterns@gmail.com">rubiksByPatterns@gmail.com</a></p>
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-2">
+      <p>&copy; DCbyCode 2023</p>
+    </div>
+
+  </div>
+
+  
+</footer>
+
+</body>
+</html>
