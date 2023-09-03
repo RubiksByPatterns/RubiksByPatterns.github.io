@@ -1,0 +1,459 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Rubiks By Patterns - First Layer</title>
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/style.css">
+        
+        <!-- Load external scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <!--Imports a model-viewer JavaScript code -->
+        <!--It helps to handle how the 3D Object would be displayed -->
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+    </head>
+
+    <body>
+        <!--NavBar-->
+        <nav class="navbar navbar-light align-items-end" style="background-color: #377ae6; color: white;">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a href="index.html"><img src="/Assets/Logo.svg" alt="Logo" style="height:60px; padding: 5px;"></a>
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="border-color: white;">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                       
+              </button>
+            </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar" >
+      <ul class="nav navbar-nav" >
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="firstLayer.html">Top Layer</a></li>
+        <li><a href="middleLayer.html">Middle Layer</a></li>
+        <li><a href="cross.html">Cross</a></li>
+        <li><a href="orientedCross.html">Oriented Cross</a></li>
+        <li><a href="bottomCorners.html">Bottom Corners</a></li>
+        <li><a href="final.html">Oriented Corners</a></li>
+        <li><a href="Disclaimer.html">Disclaimer</a></li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Body -->
+    <!-- SideTab ->>
+    <div class="col-sm-2 sidenav text-left">
+      <p><a href="#Intro">End point</p>
+      <p><a href="#StartingPoint">Starting point</p>
+      <p><a href="#KeyMovers">Key Movers</a></p>
+      <p><a href="#Method">Method</a></p>
+    </div>
+
+    <!-- Main -->
+    <div class="col-sm-10 text-left main"> 
+      <h1>Solving the Middle layer: The Adjacents & Opposites</h1>
+      <h3 id="Intro">Introduction</h3>
+      <p>After solving for the top, the next step is solving the middle layer so that it looks like this:</p>
+      <div class="row">      
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+          <model-viewer src="Images/MiddleImages/twoLayersComplete.glb" alt="Rubiks cube skeleton" camera-controls style="height: 300px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="1" exposure="0.75" camera-orbit="-134.7deg 59.28deg 20.63m" field-of-view="30deg"></model-viewer>
+          <!--<model-viewer src="Images/MiddleImages/MiddleLayerEnding.glb" alt="Rubiks cube skeleton" camera-controls style="height: 400px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="0.88" exposure="0.5" camera-orbit="44.1deg 65.31deg 207.8m" field-of-view="30deg"></model-viewer>-->
+          </div>
+        <div class="col-sm-4"></div>
+      </div>
+
+      <hr>
+      <h3 id="StartingPoint">Starting Point</h3>
+      <h4>Finding the edge cube that you want to place.</h4>
+      <p>Look at your bottom layer. Turn your cube or the bottom layer until you find an edge square that matches the colour of a middle square.</p>
+      <p>Then have a look underneath your cube. Does the colour of your 'chosen' edge square match either the left or right face? If it doesn't, just look for another matching edge and middle. If there aren't any that match (it happens occasionally), don't worry, just do one of the moves below anyway and look again, you'll probably find one that matches.</p>
+      <div style="padding: 5px; border: 2px solid green;">
+        <p>This red edge has a <b>green</b> on the bottom, which matches the green to the red's <b>left</b>.</p>
+        <div class="row">
+          <div class="col-sm-6">
+            <model-viewer src="Images/MiddleImages/middleLeftStarting.glb" alt="Rubiks cube skeleton" camera-controls style="height: 300px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="1" exposure="0.75" camera-orbit="-114.7deg 59.28deg 20.63m" field-of-view="30deg"></model-viewer>
+          </div>
+          <div class="col-sm-6">
+            <model-viewer src="Images/MiddleImages/middleLeftStarting.glb" alt="Rubiks cube skeleton" camera-controls style="height: 300px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="1" exposure="0.75" camera-orbit="-134.7deg 119.3deg 20.63m" field-of-view="30deg"></model-viewer>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div style="padding: 5px; border: 2px solid blue;">
+        <p>This red edge has a <b>blue</b> on the bottom, which matches the blue to the red's <b>right</b>.</p>
+        <div class="row">
+          <div class="col-sm-6">
+            <model-viewer src="Images/MiddleImages/middleRightStarting.glb" alt="Rubiks cube skeleton" camera-controls style="height: 300px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="1" exposure="0.75" camera-orbit="294.3deg 59.28deg 20.63m" field-of-view="30deg"></model-viewer>
+          </div>
+          <div class="col-sm-6">
+            <model-viewer src="Images/MiddleImages/middleRightStarting.glb" alt="Rubiks cube skeleton" camera-controls style="height: 300px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="1" exposure="0.75" camera-orbit="314.3deg 119.3deg 20.63m" field-of-view="30deg"></model-viewer>
+          </div>
+        </div>
+      </div>
+      <br>
+      <h4>Twist it away</h4>
+      <p>Once you have found the one you want to place, you need to spin it AWAY from the colour that matches the one on the bottom. I like to think of it as 'opposite' the colour on the bottom. <br>
+      So, if it matches left, spin the bottom layer right.<br>
+      And if it matches right, spin the bottom layer left.
+      <br>
+      </p>
+      <div style="padding: 5px; border: 2px solid green;">
+        <p>This red edge has a <b>green</b> on the bottom, which matches the blue to the red's <b>left</b>. So you have to spin the bottom layer <b>right</b></p>
+        <div class="row">
+          <div class="col-sm-6 .text-center">
+            <video width="320" height="300" muted controls>
+            <source src="Images/MiddleImages/trialGreen1st.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+             </video>
+            
+          </div>
+          <div class="col-sm-6">
+            <video width="320" height="300" muted controls>
+            <source src="Images/MiddleImages/middleBottomGreenTilted.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+             </video>
+            
+          </div>
+        </div>
+      </div>
+      <br>
+      <div style="padding: 5px; border: 2px solid blue;">
+        <p>This red edge has a <b>blue</b> on the bottom, which matches the blue to the red's <b>right</b>. So you have to spin the bottom layer <b>left</b></p>
+        <div class="row">
+          <div class="col-sm-6">
+            <video width="320" height="300" muted controls>
+            <source src="Images/MiddleImages/middleBottomBlue.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+             </video>
+            
+          </div>
+          <div class="col-sm-6">
+            <video width="320" height="300" muted controls>
+            <source src="Images/MiddleImages/middleBottomBlueTilted.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+             </video>          
+           </div>
+        </div>
+      </div>
+
+      <hr>
+      <h3 id="KeyMovers">Key Movers</h3>
+      <p>In all the moves we do, there will be 2 "sections" we predominantly focus on.</p>
+      <p>The edge cube that you are about to place has two colours. These two colours are next to each other. Their respective faces are also 'neighbours'. So you will be working with the faces of the two colours you are trying to sort out. These faces are the key here.</p>
+
+      <div class="row">
+        <div class="col-sm-6">
+        
+          <img src="Images/MiddleImages/middleGreenKeyMovers.png" width="80%" alt="Key Movers on the left">
+        </div>
+        <div class="col-sm-6">
+          
+          <img src="Images/MiddleImages/middleBlueKeyMovers.jpg" width="80%" alt="Key Movers on the right">        </div>
+      </div>
+      <br>
+
+      <hr>
+      <h3 id="Method">Method</h3>
+      <p>In order to really understand my pattern method, you need to focus more on the top layer, and how the key-movers move. Understanding just a few pieces is key to the solution</p>
+
+      
+        <div style="border: 1px solid; padding: 5px" >
+          <p><span class="numbering">1</span> For solving the middle layer, you will need to start with the face that is opposite the middle cube that you just moved.</p>
+          <p> Spin the <b>3</b> top cubes of this side forward.</p>
+          <div class="row">
+            <div class="col-sm-6">
+              <p>So if the bottom middle cube went right, you need to move the left face.</p>
+              <video width="320" height="300px" autoplay muted controls>
+                <source src="Images/MiddleImages/middleLeft1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video> 
+            </div>
+            <div class="col-sm-6">
+              <p>If the bottom middle cube went left, you need to move the right face.</p>
+              <video width="320" height="300px" autoplay muted controls>
+                <source src="Images/MiddleImages/middleRight1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>  
+            </div>
+          </div>
+          <p>You should now have 6 top-squares at the top and 3 of them facing you.</p>
+        </div>
+        <br>
+
+        <div style="border: 1px solid; padding: 5px">
+          <p><span class="numbering">2</span> Now spin the lowest square towards the side you just moved.</p>
+            <div class="row">
+              <div class="col-sm-6">
+                <p>So if you moved the left face, you need to spin the bottom cube left.</p>
+                <video width="320" height="300" autoplay muted controls>
+                <source src="Images/MiddleImages/middleLeft2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              </div>
+              <div class="col-sm-6">
+                <p>If you moved the right hand layer, you need to spin the bottom cube right.</p>
+                <video width="320" height="300" autoplay muted controls>
+                <source src="Images/MiddleImages/middleRight2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              </div>
+            </div>
+        </div>
+         <br> 
+        <div style="border: 1px solid; padding: 5px">
+          <p><span class="numbering">3</span> You now want to spin the two remaining squares back up to the top, so that you now have 8 correct squares at the top.</p>
+            <div class="row">
+              <div class="col-sm-6">
+                <video width="320" height="300" autoplay muted controls>
+                <source src="Images/MiddleImages/middleLeft3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              </div>
+              <div class="col-sm-6">
+                <video width="320" height="300" autoplay muted controls>
+                <source src="Images/MiddleImages/middleRight3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              </div>
+            </div>
+        </div>
+        <br>
+        <div style="border: 1px solid; padding: 5px">
+          <p><span class="numbering">4</span> Now look where the single white square has ended up. If you look stright up that same line, you will see that it can go back together with the key-movers that we haven't yet touched. So you first have to move it out the way, by spinning it away, in the same direction that you moved it in the first place.</p>
+            <div class="row">
+              <div class="col-sm-6">
+                <video width="320" height="300" autoplay muted controls>
+                <source src="Images/MiddleImages/middleLeft4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              </div>
+              <div class="col-sm-6">
+                <video width="320" height="300" autoplay muted controls>
+                <source src="Images/MiddleImages/middleRight4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              </div>
+            </div>
+        </div>
+        <br>
+        <div style="border: 1px solid; padding: 5px">
+          <p><span class="numbering">5</span> Now bring these final 2 'key-movers' forward.</p>
+            <div class="row">
+              <div class="col-sm-6">
+                <video width="320" height="300" autoplay muted controls>
+                <source src="Images/MiddleImages/middleLeft5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              </div>
+              <div class="col-sm-6">
+                <video width="320" height="300" autoplay muted controls>
+                <source src="Images/MiddleImages/middleRight5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              </div>
+            </div>
+        </div>
+        <br>
+        <div style="border: 1px solid; padding: 5px">
+          <p><span class="numbering">6</span> Bring the single square back around so you have a row of 3.</p>
+            <div class="row">
+              <div class="col-sm-6">
+                <video width="320" height="300" autoplay muted controls>
+                <source src="Images/MiddleImages/middleLeft6.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              </div>
+              <div class="col-sm-6">
+                <video width="320" height="300" autoplay muted controls>
+                <source src="Images/MiddleImages/middleRight6.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              </div>
+            </div>
+        </div>
+        <br>
+        <div style="border: 1px solid; padding: 5px">
+          <p><span class="numbering">7</span> And pop that row of 3 back up to the top. If everything went according to plan, the top is now back in the correct positions and orientation, and you have placed one of the 2nd layer edge pieces.</p>
+            <div class="row">
+              <div class="col-sm-6">
+                <video width="320" height="300" autoplay muted controls>
+                <source src="Images/MiddleImages/middleLeft7.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              </div>
+              <div class="col-sm-6">
+                <video width="320" height="300" autoplay muted controls>
+                <source src="Images/MiddleImages/middleRight7.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <h3>Altogether</h3>
+        <div style="border: 1px solid; padding: 5px">
+          <p>Putting that all together looks like this:</p>
+            <div class="row">
+              <div class="col-sm-6">
+                <p>Placing the left middle edge:</p>
+                <video width="320" height="300" autoplay muted controls>
+                <source src="Images/MiddleImages/middleGreenAnimation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+             </video>          
+              </div>
+              <div class="col-sm-6">
+                <p>Placing the right middle edge:</p>
+                <video width="320" height="300" autoplay muted controls>
+                <source src="Images/MiddleImages/middleBlueAnimation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+             </video>          
+
+              </div>
+            </div>
+        </div>
+        <br>
+
+        <div style="border: 1px solid; padding: 5px">
+          <p>If it helps, here it is with the key movers:</p>
+            <div class="row">
+              <div class="col-sm-6">
+                
+                <video width="320" height="300" autoplay muted controls>
+                <source src="Images/MiddleImages/middleGreenAnimationKeymovers.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+             </video>          
+              </div>
+              <div class="col-sm-6">
+                
+                <video width="320" height="300" autoplay muted controls>
+                <source src="Images/MiddleImages/middleBlueAnimationKeymovers.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+             </video>          
+
+              </div>
+            </div>
+        </div>
+        <br>
+
+        <div style="border: 1px solid; padding: 5px">       
+          <p>And if you add the first move, which was to spin the bottom later away, you get this:</p>
+            <div class="row">
+              <div class="col-sm-6">
+                <p>Placing the left middle edge:</p>
+                <video width="320" height="300" autoplay muted controls>
+                <source src="Images/MiddleImages/middleGreenAnimationAll.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+             </video>          
+              </div>
+              <div class="col-sm-6">
+                <p>Placing the right middle edge:</p>
+                <video width="320" height="300" autoplay muted controls>
+                <source src="Images/MiddleImages/middleBlueAnimationAll.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>          
+
+              </div>
+            </div>
+
+        </div>
+        <br>
+        <p><b>Now repeat all of the above, until you have solved for all 4 edges. If you get to a point where you can't find a bottom piece that matches up, then just do one of these moves for an unsolved edge and you should get a workable piece again.</b>
+        </p>
+        <br>
+        <br>
+        <br>
+
+            
+<!--
+      <hr>
+      <h3 id="WhatHappened">How did this work?</h3>
+      <p>What we have just done is swapped a few of the edge pieces around, by simply moving and replacing a top corner piece.</p>
+
+      <video width="320" height="240" autoplay muted controls>
+        <source src="Images/MiddleImages/middleLayerLeft.mp4" type="video/mp4">
+        <source src="Images/MiddleImages/middleLayerLeft.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
+
+      <p>You needed to get the top corner piece twisted so that it can be in the correct orientation for the edge piece.</p>
+      <img src="Images/MiddleImages/MiddleLayerHow.svg">
+      <br>
+      <p>However, you had to manipulate it a bit in order for you to get them next to each other.</p>
+      <img src="Images/MiddleImages/MiddleLayerExplainedPyramid.svg">
+
+      <br>
+      <br>
+      <br>
+    </div>-->
+    <!--<div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>-->
+
+      <div class="row">
+        <div class="col-sm-2">
+          <a href="TopLayer.php" class="navButton">&laquo; PREVIOUS</a>
+        </div>
+        <div class="col-sm-8"></div>
+        <div class="col-sm-2">
+          <a href="cross.php" class="navButton">NEXT &raquo;</a>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+
+
+    </div>
+    <!--<div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>-->
+            </div>
+          </div>
+        </div>
+                
+ <!-- Footer -->       
+<footer class="container-fluid text-center navbar navbar-light">
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <p>Email: <a href="mailto:rubiksByPatterns@gmail.com">rubiksByPatterns@gmail.com</a></p>
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-2">
+      <p>&copy; DCbyCode 2023</p>
+    </div>
+
+  </div>
+
+  
+</footer>
+
+
+
+        
+    </body>
+
+</html>
