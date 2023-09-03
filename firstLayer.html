@@ -1,49 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!--Imports a model-viewer JavaScript code -->
+    <!--It helps to handle how the 3D Object would be displayed -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  <title>Rubik's By Patterns: First Layer</title>
 
-<html>
-    <head>
-        <meta charset="utf-8">
+</head>
+  
+<body>
 
-        <title>Rubiks By Patterns - First Layer</title>
 
-        <!-- Load external CSS styles -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/style.css">
-        
-        <!-- Load external scripts -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-        <!--Imports a model-viewer JavaScript code -->
-        <!--It helps to handle how the 3D Object would be displayed -->
-        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+ <!-- Navbar -->
+  <nav class="navbar navbar-light align-items-end" style="background-color: #377ae6; color: white;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="index.html"><img src="/Assets/Logo.svg" alt="Logo" style="height:60px; padding: 5px;"></a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="border-color: white;">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                       
+      </button>
+      
+    </div>
 
-    </head>
-
-    <body>
-        <!--NavBar-->
-        <nav class="navbar navbar-light align-items-end" style="background-color: #377ae6; color: white;">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <a href="index.html"><img src="/Assets/Logo.svg" alt="Logo" style="height:60px; padding: 5px;"></a>
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="border-color: white;">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>                       
-              </button>
-            </div>
-
+    
     <div class="collapse navbar-collapse" id="myNavbar" >
       <ul class="nav navbar-nav" >
         <li><a href="index.html">HOME</a></li>
-        <li class = "active"><a href="firstLayer.html">Top Layer</a></li>
+        <li><a href="firstLayer.html">Top Layer</a></li>
         <li><a href="middleLayer.html">Middle Layer</a></li>
         <li><a href="cross.html">Cross</a></li>
         <li><a href="orientedCross.html">Oriented Cross</a></li>
         <li><a href="bottomCorners.html">Bottom Corners</a></li>
         <li><a href="final.html">Oriented Corners</a></li>
-        <li><a href="Disclaimer.html">Disclaimer</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
         
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -53,18 +52,20 @@
   </div>
 </nav>
 
-<!-- Main Body -->
-
+  <!-- MAIN -->
 <div class="container-fluid text-center">    
   <div class="row content">
+    <!-- Side tab -->
     <div class="col-sm-2 sidenav text-left">
       <p><a href="#Intro">Solving the Top Layer</p>
       <p><a href="#EndingPoint">End point</p>
       <p><a href="#Method">Method approaches</a></p>
       <p><a href="#Assumptions">Assumptions</a></p>
+      -->
     </div>
-    <div class="col-sm-10 text-left main"> 
-      <h1 id="Intro">Solving the Top layer</h1>
+
+    <!-- Main content -->
+    <h1 id="Intro">Solving the Top layer</h1>
       <p>Here I will touch briefly on the top layer. Many people can get one layer of at least one colour. What you also need to do is make the edges match the centre peices on the sides, as below.</p>
       <p>Because this stage is much more intuitive than the rest, I won't be dedicating much time to all the many different permutations to get to the end point of this particular stage.</p>
 
@@ -75,7 +76,7 @@
       <div class="row">      
         <div class="col-sm-4"></div>
         <div class="col-sm-4">
-          <model-viewer src="/Assets/FirstLayerImages/firstLayer.glb" alt="Rubiks cube skeleton" camera-controls style="height: 300px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="1" exposure="0.75" camera-orbit="-134.7deg 59.28deg 20.63m" field-of-view="30deg"></model-viewer>
+          <model-viewer src="/Assets/FirstLayerImages/firstLayer.glb" alt="Rubiks cube skeleton" camera-controls style="height: 300px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="1" exposure="0.75" camera-orbit="-136deg 52.65deg 20.64m" field-of-view="30deg"></model-viewer>
           </div>
         <div class="col-sm-4"></div>
       </div>
@@ -83,7 +84,7 @@
       <br>      
       
       <hr>
-      <h3 id="Cross">Cross</h3>
+      <h3 id="Method">Method approaches</h3>
       <p>There are various ways that people like to approach the solving of the top layer.</p>
       <h5>Row</h5>
 
@@ -91,10 +92,10 @@
       <div class="row">
         
           <div class="col-sm-6">
-            <model-viewer src="Images/FirstLayerImages/firstLayerRow1.glb" alt="Rubiks cube skeleton" camera-controls style="height: 300px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="1" exposure="0.75" camera-orbit="-134.7deg 59.28deg 20.63m" field-of-view="30deg"></model-viewer>
+            <model-viewer src="/Assets/FirstLayerImages/firstLayerRow1.glb" alt="Rubiks cube skeleton" camera-controls style="height: 300px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="1" exposure="0.75" camera-orbit="-134.7deg 59.28deg 20.63m" field-of-view="30deg"></model-viewer>
             </div>
           <div class="col-sm-6">
-            <model-viewer src="Images/FirstLayerImages/firstLayerRow2.glb" alt="Rubiks cube skeleton" camera-controls style="height: 300px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="1" exposure="0.75" camera-orbit="-134.7deg 59.28deg 20.63m" field-of-view="30deg"></model-viewer>
+            <model-viewer src="/Assets/FirstLayerImages/firstLayerRow2.glb" alt="Rubiks cube skeleton" camera-controls style="height: 300px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="1" exposure="0.75" camera-orbit="-134.7deg 59.28deg 20.63m" field-of-view="30deg"></model-viewer>
           </div>
       </div>
 
@@ -103,10 +104,14 @@
       <div class="row">
         <div class="col-sm-4"></div>
           <div class="col-sm-4">
-            <model-viewer src="Images/FirstLayerImages/firstLayerCross.glb" alt="Rubiks cube skeleton" camera-controls style="height: 300px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="1" exposure="0.75" camera-orbit="-134.7deg 59.28deg 20.63m" field-of-view="30deg"></model-viewer>
+            <model-viewer src="/Assets/FirstLayerImages/firstLayerCross.glb" alt="Rubiks cube skeleton" camera-controls style="height: 300px;" ar ar-modes="webxr scene-viewer quick-look" poster="poster.webp" shadow-intensity="1" exposure="0.75" camera-orbit="-134.7deg 59.28deg 20.63m" field-of-view="30deg"></model-viewer>
             </div>
           <div class="col-sm-4"></div>
       </div>
+
+     
+
+      
 
       <h5>Just go for it</h5>
 
@@ -119,6 +124,7 @@
       <br>
       <br>
 
+
       <div class="row">
         <div class="col-sm-2">
           <a href="index.html" class="navButton">&laquo; PREVIOUS</a>
@@ -128,25 +134,14 @@
           <a href="middleLayer.html" class="navButton">NEXT &raquo;</a>
         </div>
       </div>
-      
       <br>
       <br>
       <br>
-
-
     </div>
-    <!--<div class="col-sm-2 sidenav">
-      <div class="well">
-        <p>ADS</p>
-      </div>
-      <div class="well">
-        <p>ADS</p>
-      </div>-->
-            </div>
-          </div>
-        </div>
-                
- <!-- Footer -->       
+  </div>
+</div>
+
+<!-- Footer -->
 <footer class="container-fluid text-center navbar navbar-light">
   <div class="row">
     <div class="col-sm-4"></div>
@@ -163,9 +158,5 @@
   
 </footer>
 
-
-
-        
-    </body>
-
+</body>
 </html>
