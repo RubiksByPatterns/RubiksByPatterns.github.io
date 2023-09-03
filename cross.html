@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!--Imports a model-viewer JavaScript code -->
+    <!--It helps to handle how the 3D Object would be displayed -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  <title>Rubik's By Patterns: Middle Layer</title>
+
+</head>
+  
+<body>
+
+
+ <!-- Navbar -->
+  <nav class="navbar navbar-light align-items-end" style="background-color: #377ae6; color: white;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="index.html"><img src="/Assets/Logo.svg" alt="Logo" style="height:60px; padding: 5px;"></a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="border-color: white;">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                       
+      </button>
+      
+    </div>
+
+    
+    <div class="collapse navbar-collapse" id="myNavbar" >
+      <ul class="nav navbar-nav" >
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="firstLayer.html">Top Layer</a></li>
+        <li><a href="middleLayer.html">Middle Layer</a></li>
+        <li><a href="cross.html">Cross</a></li>
+        <li><a href="orientedCross.html">Oriented Cross</a></li>
+        <li><a href="ottomCorners.html">Bottom Corners</a></li>
+        <li><a href="final.html">Oriented Corners</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- MAIN -->
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <!-- Side tab -->
+    <div class="col-sm-2 sidenav text-left">
+      <p><a href="#Intro">End point</p>
+      <p><a href="#StartingPoint">Starting point</p>
+      <p><a href="#KeyMovers">Key Movers</a></p>
+      <p><a href="#Method">Method</a></p>
+      <!--
+      <p><a href="#WhatHappened">What happened</a></p>
+      -->
+    </div>
+
+    <!-- Main content -->
+      <div class="col-sm-10 text-left main"> 
+      <h1>Solving the bottom cross: The L-back</h1>
+      <h3 id="Intro"></h3>
+      <p>The next task is to make the bottom cross. They don't have to be in their correct positions just yet, we will sort that out in the next stage.</p>
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-4">
+          <img src="/Assets/CrossImages/bottomCrossEnding.png" style="height: 200px" alt="Bottom cross">
+        </div>
+        <div class="col-sm-5"></div>
+      </div>
+
+
+      <hr>
+      <h3 id="StartingPoint">Starting Point</h3>
+      <p>So, I call this one the 'L-back', as we start with an 'L' shape of correct-coloured squares at the bottom of your cube, and two of our key-movers will actually be at the back of the cube as you will see later.</p>
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-4">
+          <img src="/Assets/CrossImages/bottomCrossStarting.png" style="height: 200px" alt="Starting position to complete the bottom cross">
+        </div>
+        <div class="col-sm-5"></div>
+        
+      </div>
+
+      <br>
+      <br>
+      <p>But it might take a couple of turns to get there as you might not have an 'L' immediately. Try keep at least one correct square at the <b>top</b>. Rarely you might have no correct one at all. Don't stress, just do this move below until you get one at the top.</p>
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="/Assets/CrossImages/bottomCrossStartingTwo.png" style="height: 200px" alt="Starting position if lowercased 'l' found">
+        </div>
+        <div class="col-sm-4">
+          <img src="/Assets/CrossImages/bottomCrossStartingOne.png" style="height: 200px" alt="Starting position if only one correct square">
+        </div>
+        <div class="col-sm-4">
+          <img src="/Assets/CrossImages/bottomCrossStartingNone.png" style="height: 200px" alt="Starting position if no correct squares">
+        </div>
+
+      </div>
+      
+
+      <hr>
+      <h3 id="KeyMovers">Key Movers</h3>
+      <p>First we will flip the cube so the solved side is at the top again. Then we use the <b>left</b> hand squares and the <b>back</b> squares (in keeping with our 'L-back' theme for this part of the solve.)</p>
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-4">
+          <img src="/Assets/CrossImages/bottomCrosskeyMovers.png" style="height: 200px" alt="Bottom cross key movers">
+        </div>
+        <div class="col-sm-5"></div>
+
+      </div>
+      
+
+      <hr>
+      <h3 id="Method">Method</h3>
+      <p><span class="numbering">1</span> First, you need to turn the cube back over so that the solved layer is on the top. Once done, the top of the 'L' (or the cube chosen to be the top), should be pointing towards you.</p>
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+          <video width="320" height="300" muted controls autoplay>
+          <source src="/Assets/CrossImages/bottomCross1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+
+      <p><span class="numbering">2</span> Then twist the left face forward.</p>
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+          <video width="320" height="300" muted controls autoplay>
+          <source src="/Assets/CrossImages/bottomCross2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+
+      <p><span class="numbering">3<span class="numbering"> Twist the bottom square <b>right</b>.</p>
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+          <video width="320" height="300" muted controls autoplay>
+          <source src="/Assets/CrossImages/bottomCross3.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+
+      <p><span class="numbering">4</span> Now turn the back face to the <b>left</b>.</p>
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+          <video width="320" height="300" muted controls autoplay>
+          <source src="/Assets/CrossImages/bottomCross4.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+
+      <p><span class="numbering">5</span> Bring the single back to make a row of three.</p>
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+          <video width="320" height="300" muted controls autoplay>
+          <source src="/Assets/CrossImages/bottomCross5.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+
+      <p><span class="numbering">6</span> Replace the two <b>back</b> ones.</p>
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+          <video width="320" height="300" muted controls autoplay>
+          <source src="/Assets/CrossImages/bottomCross6.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+
+      <p><span class="numbering">7</span> Replace the other three squares.</p>
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+          <video width="320" height="300" muted controls autoplay>
+          <source src="/Assets/CrossImages/bottomCross7.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+
+      <p><span class="numbering">8</span> Turn your cube over and you should see a cross at the bottom.</p>
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+          <video width="320" height="300" muted controls autoplay>
+          <source src="/Assets/CrossImages/bottomCross8.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+      <br>
+
+      <hr>
+        <h3>Altogether</h3>
+      <p>Here it is all in one:</p>
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+          <video width="320" height="300" muted controls autoplay>
+          <source src="/Assets/CrossImages/bottomCrossAllNoMarkers.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+
+      <p>Here it is with the key-movers marked:</p>
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+          <video width="320" height="300" muted controls autoplay>
+          <source src="/Assets/CrossImages/bottomCrossMarkersAll.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+      <br>
+      <br>
+      <br>
+
+<!--
+      <hr>
+      <h3 id="WhatHappened">What happened to the bottom layer</h3>
+      <p>What happened</p>
+    </div>-->
+    <!--<div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>-->
+
+
+      <div class="row">
+        <div class="col-sm-2">
+          <a href="middleLayer.html" class="navButton">&laquo; PREVIOUS</a>
+        </div>
+        <div class="col-sm-8"></div>
+        <div class="col-sm-2">
+          <a href="orientedCross.html" class="navButton">NEXT &raquo;</a>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid text-center navbar navbar-light">
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <p>Email: <a href="mailto:rubiksByPatterns@gmail.com">rubiksByPatterns@gmail.com</a></p>
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-2">
+      <p>&copy; DCbyCode 2023</p>
+    </div>
+
+  </div>
+
+  
+</footer>
+
+</body>
+</html>
