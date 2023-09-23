@@ -9,44 +9,53 @@
 
 <url>
   <loc>https://www.rubiksbypatterns.com/</loc>
-  <lastmod>2023-09-07T23:37:11+00:00</lastmod>
+  <lastmod>2023-09-23T08:58:58+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.rubiksbypatterns.com/index.html</loc>
-  <lastmod>2023-09-07T23:37:11+00:00</lastmod>
-  <priority>1.00</priority>
+  <lastmod>2023-09-23T08:58:58+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.rubiksbypatterns.com/firstLayer.html</loc>
-  <lastmod>2023-09-07T23:37:11+00:00</lastmod>
+  <lastmod>2023-09-23T08:58:58+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.rubiksbypatterns.com/middleLayer.html</loc>
-  <lastmod>2023-09-07T23:37:11+00:00</lastmod>
+  <lastmod>2023-09-23T08:58:58+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.rubiksbypatterns.com/cross.html</loc>
-  <lastmod>2023-09-07T23:37:11+00:00</lastmod>
+  <lastmod>2023-09-23T08:58:58+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.rubiksbypatterns.com/orientedCross.html</loc>
-  <lastmod>2023-09-07T23:37:11+00:00</lastmod>
+  <lastmod>2023-09-23T08:58:58+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.rubiksbypatterns.com/bottomCorners.html</loc>
-  <lastmod>2023-09-07T23:37:11+00:00</lastmod>
+  <lastmod>2023-09-23T08:58:58+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.rubiksbypatterns.com/final.html</loc>
-  <lastmod>2023-09-07T23:37:11+00:00</lastmod>
+  <loc>https://www.rubiksbypatterns.com/orientedBottomCorners.html</loc>
+  <lastmod>2023-09-23T08:58:58+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
+<url>
+  <loc>https://www.rubiksbypatterns.com/disclaimer.html</loc>
+  <lastmod>2023-09-23T08:58:58+00:00</lastmod>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://www.rubiksbypatterns.com/contact.html</loc>
+  <lastmod>2023-09-23T08:58:58+00:00</lastmod>
+  <priority>0.50</priority>
+</url>
 
 </urlset>
